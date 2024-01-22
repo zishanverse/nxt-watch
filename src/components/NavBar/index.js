@@ -23,7 +23,7 @@ import {
   CloseBtnContainer,
 } from './styled'
 import {NavigationCard, PageName} from '../SideBar/styled'
-import '../SideBar/index.css'
+import './index.css'
 
 const NavBar = props => {
   const logout = () => {
@@ -37,8 +37,10 @@ const NavBar = props => {
   const navigation = darkTheme => (
     <div>
       <Link to="/" className="link">
-        <NavigationCard menu darkTheme={darkTheme} active={path === '/'}>
-          <AiFillHome className={`${path === '/' ? 'active' : 'inactive'}`} />
+        <NavigationCard darkTheme={darkTheme} active={path === '/'}>
+          <AiFillHome
+            className={`${path === '/' ? 'menu-active' : 'menu-inactive'}`}
+          />
           <PageName active={path === '/'} darkTheme={darkTheme}>
             Home
           </PageName>
@@ -46,13 +48,11 @@ const NavBar = props => {
       </Link>
 
       <Link to="/trending" className="link">
-        <NavigationCard
-          menu
-          darkTheme={darkTheme}
-          active={path === '/trending'}
-        >
+        <NavigationCard darkTheme={darkTheme} active={path === '/trending'}>
           <HiFire
-            className={`${path === '/trending' ? 'active' : 'inactive'}`}
+            className={`${
+              path === '/trending' ? 'menu-active' : 'menu-inactive'
+            }`}
           />
           <PageName active={path === '/trending'} darkTheme={darkTheme}>
             Trending
@@ -61,9 +61,11 @@ const NavBar = props => {
       </Link>
 
       <Link to="/gaming" className="link">
-        <NavigationCard menu darkTheme={darkTheme} active={path === '/gaming'}>
+        <NavigationCard darkTheme={darkTheme} active={path === '/gaming'}>
           <SiYoutubegaming
-            className={`${path === '/gaming' ? 'active' : 'inactive'}`}
+            className={`${
+              path === '/gaming' ? 'menu-active' : 'menu-inactive'
+            }`}
           />
           <PageName active={path === '/gaming'} darkTheme={darkTheme}>
             Gaming
@@ -72,13 +74,11 @@ const NavBar = props => {
       </Link>
 
       <Link to="/saved-videos" className="link">
-        <NavigationCard
-          menu
-          darkTheme={darkTheme}
-          active={path === '/saved-videos'}
-        >
+        <NavigationCard darkTheme={darkTheme} active={path === '/saved-videos'}>
           <MdPlaylistAdd
-            className={`${path === '/saved-videos' ? 'active' : 'inactive'}`}
+            className={`${
+              path === '/saved-videos' ? 'menu-active' : 'menu-inactive'
+            }`}
           />
           <PageName active={path === '/saved-videos'} darkTheme={darkTheme}>
             Saved videos
@@ -106,7 +106,7 @@ const NavBar = props => {
                 alt="website logo"
               />
             </Link>
-            <Flex>
+            <Flex small>
               <ThemeBtn
                 type="button"
                 data-testid="theme"

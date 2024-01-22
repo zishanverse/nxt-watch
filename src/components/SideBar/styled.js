@@ -26,7 +26,7 @@ export const NavigationCard = styled.div`
     return '#fff'
   }};
   display: flex;
-  justify-content: ${props => (props.menu ? 'center' : 'flex-start')};
+  justify-content: 'flex-start';
   align-items: center;
 `
 

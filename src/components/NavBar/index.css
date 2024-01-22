@@ -1,0 +1,10 @@
+.menu-active {
+  color: #ff0000;
+  margin-left: 40vw;
+  margin-right: 20px;
+}
+.menu-inactive {
+  color: #606060;
+  margin-left: 40vw;
+  margin-right: 20px;
+}

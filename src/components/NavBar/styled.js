@@ -21,6 +21,9 @@ export const Flex = styled.div`
   @media (max-width: 767px) {
     width: ${props => (props.logout ? '90%' : '130px')};
   }
+  @media (max-width: 575px) {
+    width: ${props => (props.small ? '60%' : null)};
+  }
 `
 
 export const Img = styled.img`

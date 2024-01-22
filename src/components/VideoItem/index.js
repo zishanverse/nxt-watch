@@ -17,16 +17,24 @@ const VideoItem = props => {
         return (
           <Link to={`/videos/${id}`} className="link">
             <Flex mainContainer>
-              <Img src={thumbnailUrl} alt="video thumbnail" />
-              <Flex column>
-                <Title darkTheme={darkTheme}>{title}</Title>
-                <Text darkTheme={darkTheme}>{name}</Text>
+              <Img small src={thumbnailUrl} alt="video thumbnail" />
+              <Flex column small>
+                <Title small darkTheme={darkTheme}>
+                  {title}
+                </Title>
+                <Text small darkTheme={darkTheme}>
+                  {name}
+                </Text>
                 <Flex list as="ul">
                   <ListItem>
-                    <Text darkTheme={darkTheme}>{viewCount} views</Text>
+                    <Text small darkTheme={darkTheme}>
+                      {viewCount} views
+                    </Text>
                   </ListItem>
                   <ListItem time>
-                    <Text darkTheme={darkTheme}>{time[1]} years ago</Text>
+                    <Text small darkTheme={darkTheme}>
+                      {time[1]} years ago
+                    </Text>
                   </ListItem>
                 </Flex>
               </Flex>

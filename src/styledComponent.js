@@ -16,6 +16,9 @@ export const BannerCard = styled.div`
   align-items: center;
   padding: 20px;
   background-color: ${props => (props.darkTheme ? '#181818' : '#cccccc')};
+  @media (max-width: 575px) {
+    padding: 10px;
+  }
 `
 export const PageLogo = styled.div`
   border-radius: 100px;
@@ -25,16 +28,27 @@ export const PageLogo = styled.div`
   align-items: certer;
   background-color: ${props => (props.darkTheme ? '#0f0f0f' : '#cbd5e1')};
   margin-right: 20px;
+  margin-left: 15px;
+  @media (max-width: 575px) {
+    padding: 10px;
+  }
 `
 export const BannerName = styled.h1`
   color: ${props => (props.darkTheme ? '#ffffff' : '#1e293b')};
   font-family: 'Roboto';
+  @media (max-width: 575px) {
+    font-size: 20px;
+    margin: 5px;
+  }
 `
 export const VideoListCard = styled.div`
   padding: 30px;
   display: ${props => (props.game ? 'flex' : null)};
   justify-content: ${props => (props.game ? 'space-between' : null)};
   flex-wrap: ${props => (props.game ? 'wrap' : 'nowrap')};
+  @media (max-width: 757px) {
+    padding: 10px;
+  }
 `
 export const Card = styled.div`
   display: flex;
@@ -59,12 +73,19 @@ export const Title = styled.p`
   font-size: 2vw;
   font-family: 'Roboto';
   color: ${props => (props.darkTheme ? '#ebebeb' : '#1e293b')};
+  @media (max-width: 575px) {
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
 `
 export const Text = styled.p`
   color: ${props => (props.darkTheme ? '#64748b' : '#94a3b8')};
   font-family: 'Roboto';
   margin-top: 5px;
   margin-bottom: 10px;
+  @media (max-width: 575px) {
+    font-size: 13px;
+  }
 `
 export const Flex = styled.div`
   display: flex;
@@ -74,9 +95,23 @@ export const Flex = styled.div`
   width: ${props => (props.game ? '30%' : null)};
   margin: ${props => (props.mainContainer ? '30px' : '0px')};
   margin-bottom: ${props => (props.game ? '40px' : null)};
+  
   @media (max-width: 575px) {
-    width: ${props => (props.game ? '45%' : null)};
-  }
+    margin: ${props => (props.mainContainer ? '10px' : '0px')};
+    margin-bottom: ${props => (props.small ? '30px' : null)};
+    width: ${props => {
+      if (props.game) {
+        return '45%'
+      }
+      if (props.small) {
+        return '50%'
+      }
+      if (props.list) {
+        return '100%'
+      }
+      return null
+    }};
+    
 `
 export const Img = styled.img`
   width: ${props => (props.game ? '100%' : '30vw')};
@@ -84,5 +119,9 @@ export const Img = styled.img`
   margin-right: 12px;
   @media (max-width: 767px) {
     height: ${props => (props.game ? '27vw' : '15vw')};
+  }
+  @media (max-width: 575px) {
+    width: ${props => (props.small ? '45vw' : null)};
+    height: ${props => (props.small ? '30vw' : null)};
   }
 `
