@@ -67,7 +67,7 @@ export const ListItem = styled.li`
   color: ${props => (props.darkTheme ? '#64748b' : '#94a3b8')};
 `
 export const Title = styled.p`
-  margin-top: 10px;
+  margin-top: 0px;
   margin-bottom: 0px;
   font-weight: 500;
   font-size: 2vw;
@@ -97,7 +97,7 @@ export const Flex = styled.div`
   margin-bottom: ${props => (props.game ? '40px' : null)};
   
   @media (max-width: 575px) {
-    margin: ${props => (props.mainContainer ? '10px' : '0px')};
+    margin: ${props => (props.mainContainer ? '0px' : '0px')};
     margin-bottom: ${props => (props.small ? '30px' : null)};
     width: ${props => {
       if (props.game) {
@@ -121,7 +121,15 @@ export const Img = styled.img`
     height: ${props => (props.game ? '27vw' : '15vw')};
   }
   @media (max-width: 575px) {
-    width: ${props => (props.small ? '45vw' : null)};
-    height: ${props => (props.small ? '30vw' : null)};
+    width: ${props => (props.small ? '43vw' : null)};
+    height: ${props => {
+      if (props.game) {
+        return '40vw'
+      }
+      if (props.small) {
+        return '33vw'
+      }
+      return null
+    }};
   }
 `
