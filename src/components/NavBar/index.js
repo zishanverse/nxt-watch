@@ -21,16 +21,10 @@ import {
   NavBtn,
   MenuCard,
   CloseBtnContainer,
-<<<<<<< HEAD
   List,
 } from './styled'
 import {NavigationCard, PageName} from '../SideBar/styled'
 import '../../App.css'
-=======
-} from './styled'
-import {NavigationCard, PageName} from '../SideBar/styled'
-import './index.css'
->>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
 
 const NavBar = props => {
   const logout = () => {
@@ -42,7 +36,6 @@ const NavBar = props => {
   const {path} = match
 
   const navigation = darkTheme => (
-<<<<<<< HEAD
     <List>
       <Link to="/" className="link">
         <li>
@@ -105,59 +98,6 @@ const NavBar = props => {
         </li>
       </Link>
     </List>
-=======
-    <div>
-      <Link to="/" className="link">
-        <NavigationCard darkTheme={darkTheme} active={path === '/'}>
-          <AiFillHome
-            className={`${path === '/' ? 'menu-active' : 'menu-inactive'}`}
-          />
-          <PageName active={path === '/'} darkTheme={darkTheme}>
-            Home
-          </PageName>
-        </NavigationCard>
-      </Link>
-
-      <Link to="/trending" className="link">
-        <NavigationCard darkTheme={darkTheme} active={path === '/trending'}>
-          <HiFire
-            className={`${
-              path === '/trending' ? 'menu-active' : 'menu-inactive'
-            }`}
-          />
-          <PageName active={path === '/trending'} darkTheme={darkTheme}>
-            Trending
-          </PageName>
-        </NavigationCard>
-      </Link>
-
-      <Link to="/gaming" className="link">
-        <NavigationCard darkTheme={darkTheme} active={path === '/gaming'}>
-          <SiYoutubegaming
-            className={`${
-              path === '/gaming' ? 'menu-active' : 'menu-inactive'
-            }`}
-          />
-          <PageName active={path === '/gaming'} darkTheme={darkTheme}>
-            Gaming
-          </PageName>
-        </NavigationCard>
-      </Link>
-
-      <Link to="/saved-videos" className="link">
-        <NavigationCard darkTheme={darkTheme} active={path === '/saved-videos'}>
-          <MdPlaylistAdd
-            className={`${
-              path === '/saved-videos' ? 'menu-active' : 'menu-inactive'
-            }`}
-          />
-          <PageName active={path === '/saved-videos'} darkTheme={darkTheme}>
-            Saved videos
-          </PageName>
-        </NavigationCard>
-      </Link>
-    </div>
->>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
   )
 
   return (

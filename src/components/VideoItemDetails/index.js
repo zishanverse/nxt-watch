@@ -62,7 +62,6 @@ class VideoItemDetails extends Component {
 
   disliked = () => this.setState({like: false, dislike: true})
 
-<<<<<<< HEAD
   saved = async (addToSaveList, deleteFromList) => {
     await this.setState(pre => ({
       save: !pre.save,
@@ -73,14 +72,6 @@ class VideoItemDetails extends Component {
     } else {
       deleteFromList(list.id)
     }
-=======
-  saved = addToSaveList => {
-    const {list} = this.state
-    this.setState(pre => ({
-      save: !pre.save,
-    }))
-    addToSaveList(list)
->>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
   }
 
   loading = () => (
@@ -91,22 +82,21 @@ class VideoItemDetails extends Component {
     </Card>
   )
 
-<<<<<<< HEAD
   successView = (darkTheme, savelist, deleteFromList, addToSaveList) => {
     const {list, like, dislike} = this.state
-    const {channel, id, description, publishedAt, title, videoUrl, viewCount} =
-      list
+    const {
+      channel,
+      id,
+      description,
+      publishedAt,
+      title,
+      videoUrl,
+      viewCount,
+    } = list
     const {name, profileImageUrl, subscriberCount} = channel
     const time = formatDistanceToNow(new Date(publishedAt)).split(' ')
     const found = savelist.find(each => each.id === id)
     const save = found !== undefined ? found.save : false
-=======
-  successView = (darkTheme, addToSaveList) => {
-    const {list, like, dislike, save} = this.state
-    const {channel, description, publishedAt, title, videoUrl, viewCount} = list
-    const {name, profileImageUrl, subscriberCount} = channel
-    const time = formatDistanceToNow(new Date(publishedAt)).split(' ')
->>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
 
     return (
       <>
@@ -148,19 +138,10 @@ class VideoItemDetails extends Component {
               type="button"
               darkTheme={darkTheme}
               active={save}
-<<<<<<< HEAD
               onClick={() => this.saved(addToSaveList, deleteFromList)}
             >
               <MdPlaylistAdd className="logos" />
               {save ? 'Saved' : 'Save'}
-=======
-              onClick={() => this.saved(addToSaveList)}
-            >
-              <MdPlaylistAdd className="logos" />
-              <Text active={save} darkTheme={darkTheme}>
-                {save ? 'Saved' : 'Save'}
-              </Text>
->>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
             </Btn>
           </Flex>
         </Flex>
@@ -185,22 +166,15 @@ class VideoItemDetails extends Component {
 
   failureView = () => <FailureViewCard func={this.fetchData} failure />
 
-<<<<<<< HEAD
   renderStatus = (darkTheme, list, deleteFromList, addToSaveList) => {
-=======
-  renderStatus = (darkTheme, addToSaveList) => {
->>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
     const {isLoading} = this.state
 
     switch (isLoading) {
       case 'IN-PROGRESS':
         return this.loading()
       case 'SUCCESS':
-<<<<<<< HEAD
         return this.successView(darkTheme, list, deleteFromList, addToSaveList)
-=======
-        return this.successView(darkTheme, addToSaveList)
->>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
+
       case 'FAILURE':
         return this.failureView()
       default:
@@ -216,26 +190,19 @@ class VideoItemDetails extends Component {
           <SideBar />
           <AppContext.Consumer>
             {value => {
-<<<<<<< HEAD
               const {darkTheme, list, addToSaveList, deleteFromList} = value
-=======
-              const {darkTheme, addToSaveList} = value
->>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
+
               return (
                 <MainContainer
                   data-testid="videoItemDetails"
                   darkTheme={darkTheme}
                 >
-<<<<<<< HEAD
                   {this.renderStatus(
                     darkTheme,
                     list,
                     deleteFromList,
                     addToSaveList,
                   )}
-=======
-                  {this.renderStatus(darkTheme, addToSaveList)}
->>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
                 </MainContainer>
               )
             }}

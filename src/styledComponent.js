@@ -41,14 +41,10 @@ export const BannerName = styled.h1`
     margin: 5px;
   }
 `
-<<<<<<< HEAD
+
 export const VideoListCard = styled.ul`
   padding: 30px;
   list-style-type: none;
-=======
-export const VideoListCard = styled.div`
-  padding: 30px;
->>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
   display: ${props => (props.game ? 'flex' : null)};
   justify-content: ${props => (props.game ? 'space-between' : null)};
   flex-wrap: ${props => (props.game ? 'wrap' : 'nowrap')};
@@ -58,11 +54,8 @@ export const VideoListCard = styled.div`
 `
 export const Card = styled.div`
   display: flex;
-<<<<<<< HEAD
   padding: 0px;
   list-style-type: none;
-=======
->>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
   justify-content: ${props => (props.loader ? 'center' : 'space-between')};
   align-items: ${props => (props.loader ? 'center' : null)};
   flex-wrap: wrap;
@@ -106,7 +99,6 @@ export const Flex = styled.div`
   width: ${props => (props.game ? '30%' : null)};
   margin: ${props => (props.mainContainer ? '30px' : '0px')};
   margin-bottom: ${props => (props.game ? '40px' : null)};
-  
   @media (max-width: 575px) {
     margin: ${props => (props.mainContainer ? '0px' : '0px')};
     margin-bottom: ${props => (props.small ? '30px' : null)};
@@ -125,11 +117,7 @@ export const Flex = styled.div`
     
 `
 export const Img = styled.img`
-<<<<<<< HEAD
   max-width: ${props => (props.game ? '25vw' : '30vw')};
-=======
-  width: ${props => (props.game ? '100%' : '30vw')};
->>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
   height: ${props => (props.game ? '23vw' : '15vw')};
   margin-right: 12px;
   @media (max-width: 767px) {
