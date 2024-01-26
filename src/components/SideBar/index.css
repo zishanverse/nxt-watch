@@ -1,0 +1,22 @@
+.link {
+  text-decoration: none;
+}
+
+.theme {
+  font-size: 30px;
+}
+
+.dark {
+  color: #fff;
+}
+
+.active {
+  color: #ff0000;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.inactive {
+  color: #606060;
+  margin-left: 20px;
+  margin-right: 20px;
+}

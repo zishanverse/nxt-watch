@@ -10,6 +10,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+<<<<<<< HEAD
 
 .form-card {
   display: flex;
@@ -50,6 +51,8 @@ body {
   margin-left: 40vw;
   margin-right: 20px;
 }
+=======
+>>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
 .banner-logo {
   color: #ff0000;
   font-size: 30px;

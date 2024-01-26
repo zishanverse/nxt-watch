@@ -16,12 +16,25 @@ class App extends Component {
 
   changeTheme = () => this.setState(pre => ({darkTheme: !pre.darkTheme}))
 
+<<<<<<< HEAD
   addToSaveList = item => this.setState(pre => ({list: [...pre.list, item]}))
 
   deleteFromList = id => {
     const {list} = this.state
     const removed = list.filter(each => each.id !== id)
     this.setState({list: removed})
+=======
+  addToSaveList = item => {
+    const {list} = this.state
+    const found = list.find(each => each.id === item.id)
+    console.log(found)
+    if (found === undefined) {
+      this.setState(pre => ({list: [...pre.list, item]}))
+    } else {
+      const removed = list.filter(each => each.id !== item.id)
+      this.setState({list: removed})
+    }
+>>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
   }
 
   render() {
@@ -34,7 +47,10 @@ class App extends Component {
           changeTheme: this.changeTheme,
           list,
           addToSaveList: this.addToSaveList,
+<<<<<<< HEAD
           deleteFromList: this.deleteFromList,
+=======
+>>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
         }}
       >
         <Switch>
@@ -48,8 +64,13 @@ class App extends Component {
           <ProtectedRoute exact path="/trending" component={Trending} />
           <ProtectedRoute exact path="/gaming" component={Gaming} />
           <ProtectedRoute exact path="/saved-videos" component={SavedVideos} />
+<<<<<<< HEAD
           <Route exact path="/bad-path" component={NotFound} />
           <Redirect to="/bad-path" />
+=======
+          <Route exact path="bad-path" component={NotFound} />
+          <Redirect to="bad-path" />
+>>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
         </Switch>
       </AppContext.Provider>
     )

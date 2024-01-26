@@ -39,7 +39,10 @@ const SavedVideos = () => {
         <AppContext.Consumer>
           {value => {
             const {darkTheme, list} = value
+<<<<<<< HEAD
             console.log(list)
+=======
+>>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
             return (
               <MainContainer
                 data-testid="savedVideos"

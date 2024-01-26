@@ -13,9 +13,14 @@ import {
   Para,
   Flex,
   Img,
+<<<<<<< HEAD
   List,
 } from './styled'
 import '../../App.css'
+=======
+} from './styled'
+import './index.css'
+>>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
 
 class SideBar extends Component {
   render() {
@@ -28,6 +33,7 @@ class SideBar extends Component {
 
           return (
             <SideBarContainer darkTheme={darkTheme}>
+<<<<<<< HEAD
               <List>
                 <Link to="/" className="link">
                   <li>
@@ -105,6 +111,74 @@ class SideBar extends Component {
                   </li>
                 </Link>
               </List>
+=======
+              <div>
+                <Link to="/" className="link">
+                  <NavigationCard darkTheme={darkTheme} active={path === '/'}>
+                    <AiFillHome
+                      className={`${path === '/' ? 'active' : 'inactive'}`}
+                    />
+                    <PageName active={path === '/'} darkTheme={darkTheme}>
+                      Home
+                    </PageName>
+                  </NavigationCard>
+                </Link>
+
+                <Link to="/trending" className="link">
+                  <NavigationCard
+                    darkTheme={darkTheme}
+                    active={path === '/trending'}
+                  >
+                    <HiFire
+                      className={`${
+                        path === '/trending' ? 'active' : 'inactive'
+                      }`}
+                    />
+                    <PageName
+                      active={path === '/trending'}
+                      darkTheme={darkTheme}
+                    >
+                      Trending
+                    </PageName>
+                  </NavigationCard>
+                </Link>
+
+                <Link to="/gaming" className="link">
+                  <NavigationCard
+                    darkTheme={darkTheme}
+                    active={path === '/gaming'}
+                  >
+                    <SiYoutubegaming
+                      className={`${
+                        path === '/gaming' ? 'active' : 'inactive'
+                      }`}
+                    />
+                    <PageName active={path === '/gaming'} darkTheme={darkTheme}>
+                      Gaming
+                    </PageName>
+                  </NavigationCard>
+                </Link>
+
+                <Link to="/saved-videos" className="link">
+                  <NavigationCard
+                    darkTheme={darkTheme}
+                    active={path === '/saved-videos'}
+                  >
+                    <MdPlaylistAdd
+                      className={`${
+                        path === '/saved-videos' ? 'active' : 'inactive'
+                      }`}
+                    />
+                    <PageName
+                      active={path === '/saved-videos'}
+                      darkTheme={darkTheme}
+                    >
+                      Saved videos
+                    </PageName>
+                  </NavigationCard>
+                </Link>
+              </div>
+>>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
 
               <ContactUsContainer>
                 <Para darkTheme={darkTheme}>CONTACT US</Para>

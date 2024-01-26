@@ -52,13 +52,21 @@ export const Flex = styled.div`
   margin-bottom: 20px;
 `
 
+<<<<<<< HEAD
 export const ShowPass = styled.label`
+=======
+export const ShowPass = styled.p`
+>>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
   color: ${props => (props.darkTheme ? '#f1f1f1' : '#475569')};
   font-weight: bold;
 `
 
 export const Button = styled.button`
+<<<<<<< HEAD
   color: #ffffff;
+=======
+  color: #fff;
+>>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
   background-color: #3b82f6;
   width: 100%;
   height: 40px;

@@ -61,7 +61,10 @@ export const Btn = styled.button`
   margin: 0px;
   background-color: transparent;
   border: 0px;
+<<<<<<< HEAD
   font-family: 'Roboto';
+=======
+>>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
   font-size: 17px;
   display: flex;
   align-items: center;

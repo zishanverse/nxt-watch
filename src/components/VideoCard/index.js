@@ -15,7 +15,11 @@ const VideoCard = props => {
         const {darkTheme} = value
 
         return (
+<<<<<<< HEAD
           <ItemCard as="li">
+=======
+          <ItemCard>
+>>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
             <Link to={`/videos/${id}`} className="link">
               <Img src={thumbnailUrl} alt="video thumbnail" />
               <Flex>

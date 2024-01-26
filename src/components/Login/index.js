@@ -13,7 +13,11 @@ import {
   Flex,
   Error,
 } from './styledComponent'
+<<<<<<< HEAD
 import '../../App.css'
+=======
+import './index.css'
+>>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
 
 class Login extends Component {
   state = {
@@ -24,8 +28,12 @@ class Login extends Component {
     error: false,
   }
 
+<<<<<<< HEAD
   fetchData = async event => {
     event.preventDefault()
+=======
+  fetchData = async () => {
+>>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
     const {username, password} = this.state
     const userDetails = {username, password}
     const option = {method: 'POST', body: JSON.stringify(userDetails)}
@@ -33,7 +41,11 @@ class Login extends Component {
     const data = await response.json()
     if (response.ok) {
       const {history} = this.props
+<<<<<<< HEAD
       Cookies.set('jwt_token', data.jwt_token, {expires: 30})
+=======
+      Cookies.set('jwt_token', data.jwt_token)
+>>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
       history.replace('/')
     } else {
       this.setState({error: true, errorText: data.error_msg})
@@ -66,6 +78,7 @@ class Login extends Component {
                       ? 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png'
                       : 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png'
                   }
+<<<<<<< HEAD
                   alt="website logo"
                 />
                 <form onSubmit={this.fetchData} className="form-card">
@@ -105,6 +118,43 @@ class Login extends Component {
                   <Button type="submit">Login</Button>
                   {error && <Error>*{errorText}</Error>}
                 </form>
+=======
+                />
+                <Label htmlFor="user" darkTheme={darkTheme}>
+                  USERNAME
+                </Label>
+                <Input
+                  darkTheme={darkTheme}
+                  id="user"
+                  placeholder="Username"
+                  type="text"
+                  onChange={this.changeUser}
+                />
+
+                <Label htmlFor="pass" darkTheme={darkTheme}>
+                  PASSWORD
+                </Label>
+                <Input
+                  id="pass"
+                  darkTheme={darkTheme}
+                  placeholder="Password"
+                  type={checkbox ? 'text' : 'password'}
+                  onChange={this.changePass}
+                />
+                <Flex>
+                  <Input
+                    type="checkbox"
+                    onChange={this.checkbox}
+                    darkTheme={darkTheme}
+                    check
+                  />
+                  <ShowPass darkTheme={darkTheme}>Show Password</ShowPass>
+                </Flex>
+                <Button type="button" onClick={this.fetchData}>
+                  Login
+                </Button>
+                {error && <Error>*{errorText}</Error>}
+>>>>>>> ecb772aefd667f5e8f4815f26b161c6f0d9df1dc
               </LoginCard>
             </LoginContainer>
           )
